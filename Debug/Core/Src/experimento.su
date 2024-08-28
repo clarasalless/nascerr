@@ -1,0 +1,4 @@
+../Core/Src/experimento.c:12:6:writeSRAM	80	dynamic
+../Core/Src/experimento.c:64:6:readSRAM	24	static
+../Core/Src/experimento.c:81:6:selectECC	16	static
+../Core/Src/experimento.c:111:6:testErrorAmount	24	static

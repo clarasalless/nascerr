@@ -8,6 +8,8 @@
 #ifndef INC_EXPERIMENTO_H_
 #define INC_EXPERIMENTO_H_
 
+#include <stdint.h>
+#include "stm32l4xx_hal.h"
 
 // Enumeração para determinar o tipo de ECC a ser utilizado:
 enum ECC {HAMMING=1, TBEC, EDAC, BYPASS};
@@ -26,7 +28,7 @@ typedef struct {
 
 
 // Funções:
-void writeSRAM(uint32_t offset, uint8_t* data, uint32_t length);
+void writeSRAM(SRAM_HandleTypeDef *hsram, uint32_t offset, uint8_t data, uint32_t length);
 void readSRAM(uint32_t offset, uint8_t* buffer, uint32_t length);
 void selectECC(uint8_t ecc);
 void testErrorAmount(Telecommand command);
