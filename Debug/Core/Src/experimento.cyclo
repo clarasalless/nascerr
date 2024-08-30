@@ -1,4 +1,4 @@
-../Core/Src/experimento.c:12:6:writeSRAM	11
-../Core/Src/experimento.c:64:6:readSRAM	1
-../Core/Src/experimento.c:81:6:selectECC	5
-../Core/Src/experimento.c:111:6:testErrorAmount	1
+../Core/Src/experimento.c:32:6:writeSRAM	11
+../Core/Src/experimento.c:97:6:readSRAM	1
+../Core/Src/experimento.c:115:6:selectECC	5
+../Core/Src/experimento.c:145:6:testErrorAmount	1

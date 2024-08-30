@@ -29,7 +29,7 @@ typedef struct {
 
 // Funções:
 void writeSRAM(SRAM_HandleTypeDef *hsram, uint32_t offset, uint8_t data, uint32_t length);
-void readSRAM(uint32_t offset, uint8_t* buffer, uint32_t length);
+void readSRAM(SRAM_HandleTypeDef *hsram, uint32_t offset, uint16_t* buffer, uint32_t length);
 void selectECC(uint8_t ecc);
 void testErrorAmount(Telecommand command);
 

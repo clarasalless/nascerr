@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "experimento.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -90,6 +91,9 @@ int main(void)
   MX_GPIO_Init();
   MX_FMC_Init();
   /* USER CODE BEGIN 2 */
+  uint16_t read_from_sram[32];
+  writeSRAM(&hsram1, 0, 1, 32);
+  readSRAM(&hsram1, 0, read_from_sram, 32);
 
   /* USER CODE END 2 */
 

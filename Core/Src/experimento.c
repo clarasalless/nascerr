@@ -9,6 +9,26 @@
 #include "experimento.h"
 
 
+/*
+ * ******************************************************************************
+ *  Function Name: writeSRAM
+ *  @brief       : Writes a block of data to SRAM memory.
+ *  @param       : hsram - A pointer to the SRAM_HandleTypeDef structure that
+ *                          contains the configuration information for SRAM.
+ *  @param       : offset - A 32-bit value indicating the starting address
+ *                          in SRAM where the data should be written.
+ *  @param       : data - An 8-bit value specifying the type of data to write.
+ *                        Possible values:
+ *                        00 - Fill the block with zeros.
+ *                        01 - Fill the block with ones (0xFFFF).
+ *                        02 - Fill the block with 0x5555.
+ *                        03 - Fill the block with 0xAAAA.
+ *                        04 - Fill the block with random 16-bit values.
+ *  @param       : length - A 32-bit value specifying the size of the block to
+ *                          be written in bytes. It should be an even number.
+ *  @retval      : None
+ * ******************************************************************************
+ */
 void writeSRAM(SRAM_HandleTypeDef *hsram, uint32_t offset, uint8_t data, uint32_t length){
 	uint16_t buffer[length/2]; // Buffer que guarda o dado a ser armazenado na memória.
 	uint16_t data_cell; // Guarda o tipo de palavra a ser armazenada.
@@ -49,21 +69,35 @@ void writeSRAM(SRAM_HandleTypeDef *hsram, uint32_t offset, uint8_t data, uint32_
 	// Preenche o buffer com dados aleatórios.
 	case 4:
 		for(uint32_t i = 0; i<(length/2); i++){
-			data_cell = (rand() % 65536); // Escolhe um número aleatório entre 0 e 65535 para colocar no buffer.
+			data_cell = (rand() % 65536); // Escolhe um número aleatório entre 0 e 65535 (16 bits) para colocar no buffer.
 			buffer[i] = data_cell;
 		}
 		break;
 	}
 
-	offset += FMC_BASE;
-	HAL_SRAM_Write_16b(hsram, (uint32_t*)offset, buffer, length);
-
+	HAL_SRAM_Write_16b(hsram, (uint32_t*)offset, buffer, length);  // Escreve na memória usando a função da HAL.
 }
 
 
-void readSRAM(uint32_t offset, uint8_t* buffer, uint32_t length){
-
+/*
+ * ******************************************************************************
+ *  Function Name: readSRAM
+ *  @brief       : Reads a block of data from SRAM memory.
+ *  @param       : hsram - A pointer to the SRAM_HandleTypeDef structure that
+ *                          contains the configuration information for SRAM.
+ *  @param       : offset - A 32-bit value indicating the starting address
+ *                          in SRAM from where the data should be read.
+ *  @param       : buffer - A pointer to a memory area where the read data
+ *                          will be stored.
+ *  @param       : length - A 32-bit value specifying the size of the block to
+ *                          be read in bytes. It should be an even number.
+ *  @retval      : None
+ * ******************************************************************************
+ */
+void readSRAM(SRAM_HandleTypeDef *hsram, uint32_t offset, uint16_t* buffer, uint32_t length){
+	HAL_SRAM_Read_16b(hsram, (uint32_t*)offset, buffer, length); // Lê da memória SRAM para o buffer passado como argumnto.
 }
+
 
 /*
  * ******************************************************************************
