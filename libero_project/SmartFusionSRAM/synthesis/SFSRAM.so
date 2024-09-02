@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SynplifyOutput>
+	<result>Success</result>
+	<design>SFSRAM</design>
+	<target_verilog>C:\Users\Clara\STM32CubeIDE\workspace_1.16.0\nascerr\libero_project\SmartFusionSRAM\synthesis\SFSRAM.vm</target_verilog>
+</SynplifyOutput>

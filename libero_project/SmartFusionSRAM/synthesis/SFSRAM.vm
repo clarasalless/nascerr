@@ -1,0 +1,234 @@
+//
+// Written by Synplify Pro 
+// Product Version "V-2023.09M"
+// Program "Synplify Pro", Mapper "map202309act, Build 044R"
+// Mon Sep  2 16:08:40 2024
+//
+// Source file index table:
+// Object locations will have the form <file>:<line>
+// file 0 "\c:\microchip\libero_soc_v2024.1\synplifypro\lib\generic\smartfusion2.v "
+// file 1 "\c:\microchip\libero_soc_v2024.1\synplifypro\lib\vlog\hypermods.v "
+// file 2 "\c:\microchip\libero_soc_v2024.1\synplifypro\lib\vlog\umr_capim.v "
+// file 3 "\c:\microchip\libero_soc_v2024.1\synplifypro\lib\vlog\scemi_objects.v "
+// file 4 "\c:\microchip\libero_soc_v2024.1\synplifypro\lib\vlog\scemi_pipes.svh "
+// file 5 "\c:\users\clara\stm32cubeide\workspace_1.16.0\nascerr\libero_project\smartfusionsram\component\work\sfsram_sb\ccc_0\sfsram_sb_ccc_0_fccc.v "
+// file 6 "\c:\users\clara\stm32cubeide\workspace_1.16.0\nascerr\libero_project\smartfusionsram\component\actel\sgcore\osc\2.0.101\osc_comps.v "
+// file 7 "\c:\users\clara\stm32cubeide\workspace_1.16.0\nascerr\libero_project\smartfusionsram\component\work\sfsram_sb\fabosc_0\sfsram_sb_fabosc_0_osc.v "
+// file 8 "\c:\users\clara\stm32cubeide\workspace_1.16.0\nascerr\libero_project\smartfusionsram\component\work\sfsram_sb_mss\sfsram_sb_mss_syn.v "
+// file 9 "\c:\users\clara\stm32cubeide\workspace_1.16.0\nascerr\libero_project\smartfusionsram\component\work\sfsram_sb_mss\sfsram_sb_mss.v "
+// file 10 "\c:\users\clara\stm32cubeide\workspace_1.16.0\nascerr\libero_project\smartfusionsram\component\actel\directcore\coreresetp\7.1.100\rtl\vlog\core\coreresetp_pcie_hotreset.v "
+// file 11 "\c:\users\clara\stm32cubeide\workspace_1.16.0\nascerr\libero_project\smartfusionsram\component\actel\directcore\coreresetp\7.1.100\rtl\vlog\core\coreresetp.v "
+// file 12 "\c:\users\clara\stm32cubeide\workspace_1.16.0\nascerr\libero_project\smartfusionsram\component\work\sfsram_sb\sfsram_sb.v "
+// file 13 "\c:\users\clara\stm32cubeide\workspace_1.16.0\nascerr\libero_project\smartfusionsram\component\work\sfsram\sfsram.v "
+// file 14 "\c:\microchip\libero_soc_v2024.1\synplifypro\lib\nlconst.dat "
+// file 15 "\c:\users\clara\stm32cubeide\workspace_1.16.0\nascerr\libero_project\smartfusionsram\designer\sfsram\synthesis.fdc "
+
+`timescale 100 ps/100 ps
+module SFSRAM (
+  DEVRST_N,
+  MCU_A0,
+  MCU_A1,
+  MCU_A10,
+  MCU_A2,
+  MCU_A3,
+  MCU_A4,
+  MCU_A5,
+  MCU_A6,
+  MCU_A7,
+  MCU_A8,
+  MCU_A9,
+  MCU_CS,
+  MCU_D0,
+  MCU_D1,
+  MCU_D10,
+  MCU_D11,
+  MCU_D12,
+  MCU_D13,
+  MCU_D14,
+  MCU_D15,
+  MCU_D2,
+  MCU_D3,
+  MCU_D4,
+  MCU_D5,
+  MCU_D6,
+  MCU_D7,
+  MCU_D8,
+  MCU_D9,
+  MCU_LB,
+  MCU_OE,
+  MCU_UB,
+  MCU_WE,
+  SRAM_A0,
+  SRAM_A1,
+  SRAM_A10,
+  SRAM_A2,
+  SRAM_A3,
+  SRAM_A4,
+  SRAM_A5,
+  SRAM_A6,
+  SRAM_A7,
+  SRAM_A8,
+  SRAM_A9,
+  SRAM_CS,
+  SRAM_D0,
+  SRAM_D1,
+  SRAM_D10,
+  SRAM_D11,
+  SRAM_D12,
+  SRAM_D13,
+  SRAM_D14,
+  SRAM_D15,
+  SRAM_D2,
+  SRAM_D3,
+  SRAM_D4,
+  SRAM_D5,
+  SRAM_D6,
+  SRAM_D7,
+  SRAM_D8,
+  SRAM_D9,
+  SRAM_LB,
+  SRAM_OE,
+  SRAM_UB,
+  SRAM_WE
+)
+;
+input DEVRST_N ;
+input MCU_A0 ;
+input MCU_A1 ;
+input MCU_A10 ;
+input MCU_A2 ;
+input MCU_A3 ;
+input MCU_A4 ;
+input MCU_A5 ;
+input MCU_A6 ;
+input MCU_A7 ;
+input MCU_A8 ;
+input MCU_A9 ;
+input MCU_CS ;
+input MCU_D0 ;
+input MCU_D1 ;
+input MCU_D10 ;
+input MCU_D11 ;
+input MCU_D12 ;
+input MCU_D13 ;
+input MCU_D14 ;
+input MCU_D15 ;
+input MCU_D2 ;
+input MCU_D3 ;
+input MCU_D4 ;
+input MCU_D5 ;
+input MCU_D6 ;
+input MCU_D7 ;
+input MCU_D8 ;
+input MCU_D9 ;
+input MCU_LB ;
+input MCU_OE ;
+input MCU_UB ;
+input MCU_WE ;
+input SRAM_A0 ;
+input SRAM_A1 ;
+input SRAM_A10 ;
+input SRAM_A2 ;
+input SRAM_A3 ;
+input SRAM_A4 ;
+input SRAM_A5 ;
+input SRAM_A6 ;
+input SRAM_A7 ;
+input SRAM_A8 ;
+input SRAM_A9 ;
+input SRAM_CS ;
+input SRAM_D0 ;
+input SRAM_D1 ;
+input SRAM_D10 ;
+input SRAM_D11 ;
+input SRAM_D12 ;
+input SRAM_D13 ;
+input SRAM_D14 ;
+input SRAM_D15 ;
+input SRAM_D2 ;
+input SRAM_D3 ;
+input SRAM_D4 ;
+input SRAM_D5 ;
+input SRAM_D6 ;
+input SRAM_D7 ;
+input SRAM_D8 ;
+input SRAM_D9 ;
+input SRAM_LB ;
+input SRAM_OE ;
+input SRAM_UB ;
+input SRAM_WE ;
+wire DEVRST_N ;
+wire MCU_A0 ;
+wire MCU_A1 ;
+wire MCU_A10 ;
+wire MCU_A2 ;
+wire MCU_A3 ;
+wire MCU_A4 ;
+wire MCU_A5 ;
+wire MCU_A6 ;
+wire MCU_A7 ;
+wire MCU_A8 ;
+wire MCU_A9 ;
+wire MCU_CS ;
+wire MCU_D0 ;
+wire MCU_D1 ;
+wire MCU_D10 ;
+wire MCU_D11 ;
+wire MCU_D12 ;
+wire MCU_D13 ;
+wire MCU_D14 ;
+wire MCU_D15 ;
+wire MCU_D2 ;
+wire MCU_D3 ;
+wire MCU_D4 ;
+wire MCU_D5 ;
+wire MCU_D6 ;
+wire MCU_D7 ;
+wire MCU_D8 ;
+wire MCU_D9 ;
+wire MCU_LB ;
+wire MCU_OE ;
+wire MCU_UB ;
+wire MCU_WE ;
+wire SRAM_A0 ;
+wire SRAM_A1 ;
+wire SRAM_A10 ;
+wire SRAM_A2 ;
+wire SRAM_A3 ;
+wire SRAM_A4 ;
+wire SRAM_A5 ;
+wire SRAM_A6 ;
+wire SRAM_A7 ;
+wire SRAM_A8 ;
+wire SRAM_A9 ;
+wire SRAM_CS ;
+wire SRAM_D0 ;
+wire SRAM_D1 ;
+wire SRAM_D10 ;
+wire SRAM_D11 ;
+wire SRAM_D12 ;
+wire SRAM_D13 ;
+wire SRAM_D14 ;
+wire SRAM_D15 ;
+wire SRAM_D2 ;
+wire SRAM_D3 ;
+wire SRAM_D4 ;
+wire SRAM_D5 ;
+wire SRAM_D6 ;
+wire SRAM_D7 ;
+wire SRAM_D8 ;
+wire SRAM_D9 ;
+wire SRAM_LB ;
+wire SRAM_OE ;
+wire SRAM_UB ;
+wire SRAM_WE ;
+wire VCC ;
+wire GND ;
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* SFSRAM */
+

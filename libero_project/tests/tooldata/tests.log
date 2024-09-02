@@ -1,0 +1,16 @@
+Project Name: tests
+Location: C:\Users\Clara\STM32CubeIDE\workspace_1.16.0\nascerr\libero_project\tests
+Description: 
+Preferred HDL Type: Verilog
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : M2S005-TQ144
+Family         : SmartFusion2
+Die            : M2S005
+Package        : 144 TQ
+Speed          : STD
+Core Voltage   : 1.2
+Range          : COM

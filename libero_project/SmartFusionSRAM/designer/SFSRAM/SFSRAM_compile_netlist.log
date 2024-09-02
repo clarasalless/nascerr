@@ -1,0 +1,84 @@
+Warning: CMPG4-007: Top level port DEVRST_N is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_A0 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_A1 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_A10 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_A2 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_A3 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_A4 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_A5 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_A6 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_A7 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_A8 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_A9 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_CS is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_D0 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_D1 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_D10 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_D11 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_D12 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_D13 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_D14 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_D15 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_D2 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_D3 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_D4 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_D5 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_D6 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_D7 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_D8 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_D9 is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_LB is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_OE is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_UB is not connected to any IO pad
+Warning: CMPG4-007: Top level port MCU_WE is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_A0 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_A1 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_A10 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_A2 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_A3 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_A4 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_A5 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_A6 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_A7 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_A8 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_A9 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_CS is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_D0 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_D1 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_D10 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_D11 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_D12 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_D13 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_D14 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_D15 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_D2 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_D3 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_D4 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_D5 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_D6 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_D7 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_D8 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_D9 is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_LB is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_OE is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_UB is not connected to any IO pad
+Warning: CMPG4-007: Top level port SRAM_WE is not connected to any IO pad
+
+===============================================================================.
+
+Info: Global design data: 
+      Total globals:                       0 
+      Globals that cannot be demoted:      0 
+      Globals considered for demotion:     0 
+
+
+Info: Demotion information: 
+Info: CMPG4-302: Added 0 row global instances.
+Info: CMPG4-303: Deleted 0 global instances.
+
+===============================================================================.
+
+Error: CMPG4-010: A design must contain at least one net.
+Error:  The command 'compile' failed.
+Error:  Line 99
+Error running script
