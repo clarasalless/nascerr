@@ -1,0 +1,5 @@
+../Core/Src/NASCERR_Experimento.c:82:6:nascerr_write_sram	32	static
+../Core/Src/NASCERR_Experimento.c:91:6:nascerr_write_sram1	24	static
+../Core/Src/NASCERR_Experimento.c:113:6:nascerr_read_sram	32	static
+../Core/Src/NASCERR_Experimento.c:134:6:nascerr_select_ecc	16	static
+../Core/Src/NASCERR_Experimento.c:166:6:nascerr_fill_buffer	48	static

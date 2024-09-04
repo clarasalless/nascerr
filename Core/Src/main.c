@@ -18,11 +18,12 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "experimento.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "NASCERR_Experimento.h"
+#include "NASCERR_Control.h"
+#include "NASCERR_System.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -44,7 +45,8 @@
 SRAM_HandleTypeDef hsram1;
 
 /* USER CODE BEGIN PV */
-
+uint16_t read_from_sram[16];
+uint16_t write_buffer[16];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -91,9 +93,10 @@ int main(void)
   MX_GPIO_Init();
   MX_FMC_Init();
   /* USER CODE BEGIN 2 */
-  uint16_t read_from_sram[32];
-  writeSRAM(&hsram1, 0, 1, 32);
-  readSRAM(&hsram1, 0, read_from_sram, 32);
+
+//  nascerr_write_sram(write_buffer, 0, BYPASS_TO_SRAM, WRITE_x55h, 32);
+  nascerr_write_sram1(&hsram1, write_buffer, 0, BYPASS_TO_SRAM, WRITE_x55h, 32);
+  nascerr_read_sram(read_from_sram, 0, BYPASS_TO_SRAM, 32);
 
   /* USER CODE END 2 */
 
@@ -178,13 +181,13 @@ static void MX_FMC_Init(void)
   hsram1.Init.BurstAccessMode = FMC_BURST_ACCESS_MODE_DISABLE;
   hsram1.Init.WaitSignalPolarity = FMC_WAIT_SIGNAL_POLARITY_LOW;
   hsram1.Init.WaitSignalActive = FMC_WAIT_TIMING_BEFORE_WS;
-  hsram1.Init.WriteOperation = FMC_WRITE_OPERATION_DISABLE;
+  hsram1.Init.WriteOperation = FMC_WRITE_OPERATION_ENABLE;
   hsram1.Init.WaitSignal = FMC_WAIT_SIGNAL_DISABLE;
   hsram1.Init.ExtendedMode = FMC_EXTENDED_MODE_DISABLE;
   hsram1.Init.AsynchronousWait = FMC_ASYNCHRONOUS_WAIT_DISABLE;
   hsram1.Init.WriteBurst = FMC_WRITE_BURST_DISABLE;
   hsram1.Init.ContinuousClock = FMC_CONTINUOUS_CLOCK_SYNC_ONLY;
-  hsram1.Init.WriteFifo = FMC_WRITE_FIFO_ENABLE;
+  hsram1.Init.WriteFifo = FMC_WRITE_FIFO_DISABLE;
   hsram1.Init.NBLSetupTime = 0;
   hsram1.Init.PageSize = FMC_PAGE_SIZE_NONE;
   /* Timing */
