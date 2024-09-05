@@ -9,8 +9,10 @@
 #define INC_NASCERR_MEMORY_H_
 
 #include <stdint.h>
+#include <stdlib.h>
 #include "stm32l4xx_hal.h"
 #include "NASCERR_Control.h"
+#include "NASCERR_Experiment.h"
 
 
 #define NASCERR_SRAM_ADDRESS 0x60000000UL // Base address for SRAM

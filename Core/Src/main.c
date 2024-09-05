@@ -53,6 +53,7 @@ SRAM_HandleTypeDef hsram1;
 NASCERR_CTRL command ={
 		.bytes_msg = 32,
 		.cmd_type = 1,
+		.id = 1,
 		.data_lenght = 20,
 		.repeat = 1,
 		.write_type = WRITE_RANDOM,
@@ -109,7 +110,7 @@ int main(void)
   MX_FMC_Init();
   /* USER CODE BEGIN 2 */
 
-  nascerr_experiment_test_error_amount(command);
+  nascerr_experiment_test(command);
   /* USER CODE END 2 */
 
   /* Infinite loop */

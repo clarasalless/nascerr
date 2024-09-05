@@ -58,15 +58,12 @@ void nascerr_experiment_select_ecc(NASCERR_MODE ecc){
 }
 
 
-uint16_t nascerr_experiment_test_error_amount(NASCERR_CTRL command){
+uint16_t nascerr_experiment_test(NASCERR_CTRL command){
 	uint16_t error_total = 0;
-	//definir elas como variáveis globais de tamanho 1024 (tamanho máximo de mensagens)
-//	uint16_t write_buffer[command.data_lenght/2];
-//	uint16_t read_buffer[command.data_lenght/2];
-//	uint16_t errors[command.data_lenght/2];
 
 	for(int i = 0; i < command.repeat; i++){
 		nascerr_memory_write_sram((uint16_t*)write_buffer, 0, command.mode, command.write_type, command.data_lenght);
+		nascerr_io_delay(command.delay);
 		nascerr_memory_read_sram(read_buffer, 0, command.mode, command.data_lenght);
 		// rodar a função de erros
 		error_total = nascerr_experiment_process_buffers(command.data_lenght, (uint16_t*)write_buffer, read_buffer, errors);

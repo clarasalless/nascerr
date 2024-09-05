@@ -1,2 +1,3 @@
 ../Core/Src/NASCERR_IOs.c:11:6:nascerr_io_pin_set	16	static
 ../Core/Src/NASCERR_IOs.c:16:6:nascerr_io_pin_reset	16	static
+../Core/Src/NASCERR_IOs.c:20:6:nascerr_io_delay	16	static
