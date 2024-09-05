@@ -46,15 +46,16 @@
 SRAM_HandleTypeDef hsram1;
 
 /* USER CODE BEGIN PV */
-uint16_t read_from_sram[16];
-uint16_t write_buffer[16];
-uint8_t write8b[] = {0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55};
+//uint16_t read_from_sram[20];
+//uint16_t write_buffer[20];
+//uint16_t errorss[20];
+//uint16_t teste = 0;
 NASCERR_CTRL command ={
 		.bytes_msg = 32,
 		.cmd_type = 1,
-		.data_lenght = 32,
+		.data_lenght = 20,
 		.repeat = 1,
-		.write_type = WRITE_xAAh,
+		.write_type = WRITE_RANDOM,
 		.data = WORD_BY_WORD,
 		.mode = ECC_MOD1,
 		.delay = 1,
@@ -108,15 +109,7 @@ int main(void)
   MX_FMC_Init();
   /* USER CODE BEGIN 2 */
 
-  nascerr_memory_write_sram(write_buffer, 0, ECC_MOD1, WRITE_xAAh, 32);
-//  nascerr_write_sram8b(&hsram1, write8b, 0, ECC_MOD2, WRITE_x55h, 32);
-  nascerr_memory_read_sram(read_from_sram, 0, BYPASS_TO_SRAM, 32);
-//
-//  nascerr_test_error_amount(command);
-//  uint8_t read8b[10];
-//  uint16_t read16b[10];
-//  uint32_t read32b[10];
-//  nascerr_experiment_testrw(read8b, read16b, read32b);
+  nascerr_experiment_test_error_amount(command);
   /* USER CODE END 2 */
 
   /* Infinite loop */

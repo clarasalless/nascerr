@@ -111,7 +111,7 @@ void nascerr_memory_fill_buffer(uint16_t* buffer, W_DataTypeDef write_type, uint
 	// Preenche o buffer com dados aleatórios.
 	case 4:
 		for(uint32_t i = 0; i<(length/2); i++){
-			data_cell = (rand() % 65536); // Escolhe um número aleatório entre 0 e 65535 (16 bits) para colocar no buffer.
+			data_cell = (rand() % 256); // Escolhe um número aleatório entre 0 e 255 (8 bits) para colocar no buffer.
 			buffer[i] = data_cell;
 		}
 		break;
