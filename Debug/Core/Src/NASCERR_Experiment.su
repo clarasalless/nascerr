@@ -1,0 +1,2 @@
+../Core/Src/NASCERR_Experiment.c:26:6:nascerr_experiment_select_ecc	16	static
+../Core/Src/NASCERR_Experiment.c:58:9:nascerr_experiment_test_error_amount	80	dynamic

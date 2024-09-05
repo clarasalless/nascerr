@@ -6,7 +6,8 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Core/Src/NASCERR_Control.c \
-../Core/Src/NASCERR_Experimento.c \
+../Core/Src/NASCERR_Experiment.c \
+../Core/Src/NASCERR_IOs.c \
 ../Core/Src/NASCERR_Memory.c \
 ../Core/Src/main.c \
 ../Core/Src/stm32l4xx_hal_msp.c \
@@ -17,7 +18,8 @@ C_SRCS += \
 
 OBJS += \
 ./Core/Src/NASCERR_Control.o \
-./Core/Src/NASCERR_Experimento.o \
+./Core/Src/NASCERR_Experiment.o \
+./Core/Src/NASCERR_IOs.o \
 ./Core/Src/NASCERR_Memory.o \
 ./Core/Src/main.o \
 ./Core/Src/stm32l4xx_hal_msp.o \
@@ -28,7 +30,8 @@ OBJS += \
 
 C_DEPS += \
 ./Core/Src/NASCERR_Control.d \
-./Core/Src/NASCERR_Experimento.d \
+./Core/Src/NASCERR_Experiment.d \
+./Core/Src/NASCERR_IOs.d \
 ./Core/Src/NASCERR_Memory.d \
 ./Core/Src/main.d \
 ./Core/Src/stm32l4xx_hal_msp.d \
@@ -45,7 +48,7 @@ Core/Src/%.o Core/Src/%.su Core/Src/%.cyclo: ../Core/Src/%.c Core/Src/subdir.mk
 clean: clean-Core-2f-Src
 
 clean-Core-2f-Src:
-	-$(RM) ./Core/Src/NASCERR_Control.cyclo ./Core/Src/NASCERR_Control.d ./Core/Src/NASCERR_Control.o ./Core/Src/NASCERR_Control.su ./Core/Src/NASCERR_Experimento.cyclo ./Core/Src/NASCERR_Experimento.d ./Core/Src/NASCERR_Experimento.o ./Core/Src/NASCERR_Experimento.su ./Core/Src/NASCERR_Memory.cyclo ./Core/Src/NASCERR_Memory.d ./Core/Src/NASCERR_Memory.o ./Core/Src/NASCERR_Memory.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stm32l4xx_hal_msp.cyclo ./Core/Src/stm32l4xx_hal_msp.d ./Core/Src/stm32l4xx_hal_msp.o ./Core/Src/stm32l4xx_hal_msp.su ./Core/Src/stm32l4xx_it.cyclo ./Core/Src/stm32l4xx_it.d ./Core/Src/stm32l4xx_it.o ./Core/Src/stm32l4xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32l4xx.cyclo ./Core/Src/system_stm32l4xx.d ./Core/Src/system_stm32l4xx.o ./Core/Src/system_stm32l4xx.su
+	-$(RM) ./Core/Src/NASCERR_Control.cyclo ./Core/Src/NASCERR_Control.d ./Core/Src/NASCERR_Control.o ./Core/Src/NASCERR_Control.su ./Core/Src/NASCERR_Experiment.cyclo ./Core/Src/NASCERR_Experiment.d ./Core/Src/NASCERR_Experiment.o ./Core/Src/NASCERR_Experiment.su ./Core/Src/NASCERR_IOs.cyclo ./Core/Src/NASCERR_IOs.d ./Core/Src/NASCERR_IOs.o ./Core/Src/NASCERR_IOs.su ./Core/Src/NASCERR_Memory.cyclo ./Core/Src/NASCERR_Memory.d ./Core/Src/NASCERR_Memory.o ./Core/Src/NASCERR_Memory.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stm32l4xx_hal_msp.cyclo ./Core/Src/stm32l4xx_hal_msp.d ./Core/Src/stm32l4xx_hal_msp.o ./Core/Src/stm32l4xx_hal_msp.su ./Core/Src/stm32l4xx_it.cyclo ./Core/Src/stm32l4xx_it.d ./Core/Src/stm32l4xx_it.o ./Core/Src/stm32l4xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32l4xx.cyclo ./Core/Src/system_stm32l4xx.d ./Core/Src/system_stm32l4xx.o ./Core/Src/system_stm32l4xx.su
 
 .PHONY: clean-Core-2f-Src
 

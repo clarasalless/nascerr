@@ -21,9 +21,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "NASCERR_Experimento.h"
 #include "NASCERR_Control.h"
 #include "NASCERR_System.h"
+#include "NASCERR_Experiment.h"
+#include "NASCERR_Memory.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,6 +48,19 @@ SRAM_HandleTypeDef hsram1;
 /* USER CODE BEGIN PV */
 uint16_t read_from_sram[16];
 uint16_t write_buffer[16];
+uint8_t write8b[] = {0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55};
+NASCERR_CTRL command ={
+		.bytes_msg = 32,
+		.cmd_type = 1,
+		.data_lenght = 32,
+		.repeat = 1,
+		.write_type = WRITE_xAAh,
+		.data = WORD_BY_WORD,
+		.mode = ECC_MOD1,
+		.delay = 1,
+		.crc16 = 0xAA
+
+};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -94,10 +108,15 @@ int main(void)
   MX_FMC_Init();
   /* USER CODE BEGIN 2 */
 
-//  nascerr_write_sram(write_buffer, 0, BYPASS_TO_SRAM, WRITE_x55h, 32);
-  nascerr_write_sram1(&hsram1, write_buffer, 0, BYPASS_TO_SRAM, WRITE_x55h, 32);
-  nascerr_read_sram(read_from_sram, 0, BYPASS_TO_SRAM, 32);
-
+  nascerr_memory_write_sram(write_buffer, 0, ECC_MOD1, WRITE_xAAh, 32);
+//  nascerr_write_sram8b(&hsram1, write8b, 0, ECC_MOD2, WRITE_x55h, 32);
+  nascerr_memory_read_sram(read_from_sram, 0, BYPASS_TO_SRAM, 32);
+//
+//  nascerr_test_error_amount(command);
+//  uint8_t read8b[10];
+//  uint16_t read16b[10];
+//  uint32_t read32b[10];
+//  nascerr_experiment_testrw(read8b, read16b, read32b);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -226,15 +245,15 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
-  __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOG_CLK_ENABLE();
   __HAL_RCC_GPIOE_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
   HAL_PWREx_EnableVddIO2();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, ECC_SEL_0_Pin|ECC_SEL_1_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, ECC_SEL_0_Pin|ECC_SEL_1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, LD3_Pin|LD2_Pin, GPIO_PIN_RESET);
@@ -253,7 +272,7 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LD3_Pin LD2_Pin */
   GPIO_InitStruct.Pin = LD3_Pin|LD2_Pin;

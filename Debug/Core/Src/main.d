@@ -26,9 +26,10 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_sram.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_fmc.h \
- ../Core/Inc/NASCERR_Experimento.h ../Core/Inc/NASCERR_Control.h \
- ../Core/Inc/NASCERR_System.h ../Core/Inc/main.h \
- ../Core/Inc/NASCERR_Control.h ../Core/Inc/NASCERR_System.h
+ ../Core/Inc/NASCERR_Control.h ../Core/Inc/NASCERR_System.h \
+ ../Core/Inc/main.h ../Core/Inc/NASCERR_System.h \
+ ../Core/Inc/NASCERR_Experiment.h ../Core/Inc/NASCERR_Control.h \
+ ../Core/Inc/NASCERR_Memory.h
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -57,9 +58,10 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_sram.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_fmc.h:
-../Core/Inc/NASCERR_Experimento.h:
 ../Core/Inc/NASCERR_Control.h:
 ../Core/Inc/NASCERR_System.h:
 ../Core/Inc/main.h:
-../Core/Inc/NASCERR_Control.h:
 ../Core/Inc/NASCERR_System.h:
+../Core/Inc/NASCERR_Experiment.h:
+../Core/Inc/NASCERR_Control.h:
+../Core/Inc/NASCERR_Memory.h:

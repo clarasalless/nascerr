@@ -1,0 +1,4 @@
+../Core/Src/NASCERR_Memory.c:34:6:nascerr_memory_write_sram	32	static
+../Core/Src/NASCERR_Memory.c:43:6:nascerr_memory_write_sram8b	32	static
+../Core/Src/NASCERR_Memory.c:68:6:nascerr_memory_read_sram	32	static
+../Core/Src/NASCERR_Memory.c:76:6:nascerr_memory_fill_buffer	48	static
