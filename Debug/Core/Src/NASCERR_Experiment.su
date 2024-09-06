@@ -1,3 +1,4 @@
-../Core/Src/NASCERR_Experiment.c:29:6:nascerr_experiment_select_ecc	16	static
-../Core/Src/NASCERR_Experiment.c:61:10:nascerr_experiment_test_error_amount	24	static
-../Core/Src/NASCERR_Experiment.c:76:10:nascerr_experiment_process_buffers	32	static
+../Core/Src/NASCERR_Experiment.c:30:6:nascerr_experiment_select_ecc	16	static
+../Core/Src/NASCERR_Experiment.c:62:18:nascerr_experiment_test	8256	static
+../Core/Src/NASCERR_Experiment.c:95:10:nascerr_experiment_error_counter	40	static
+../Core/Src/NASCERR_Experiment.c:112:10:nascerr_experiment_buffer_result	40	static

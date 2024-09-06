@@ -46,8 +46,10 @@
 SRAM_HandleTypeDef hsram1;
 
 /* USER CODE BEGIN PV */
-//uint16_t read_from_sram[20];
-//uint16_t write_buffer[20];
+uint16_t read_from_sram[1];
+uint16_t write_buffers[1];
+ResDescTypeDef errors[1];
+uint32_t teste1, teste2;
 //uint16_t errorss[20];
 //uint16_t teste = 0;
 NASCERR_CTRL command ={
@@ -110,7 +112,15 @@ int main(void)
   MX_FMC_Init();
   /* USER CODE BEGIN 2 */
 
-  nascerr_experiment_test(command);
+  for (int i = 0; i<1; i++){
+	  write_buffers[i] = 0xAAAA;
+	  read_from_sram[i] = 0xFFFF;
+
+  }
+  teste1 = nascerr_experiment_error_counter(1, write_buffers, read_from_sram);
+  teste2 = nascerr_experiment_buffer_result(1, write_buffers, read_from_sram, errors);
+  //nascerr_experiment_test(command);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
